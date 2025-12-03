@@ -4,8 +4,8 @@ app = Flask(__name__, static_folder='static', template_folder='templates')
 
 
 CARTEL_DATA = [
-    {"titulo": "titulo", "imagen": "imagen1.png"},
-    {"titulo": "titulo", "imagen": "imagen2.jpg"},
+    {"titulo": "titulo", "imagen": "Imagen1.png"},
+    {"titulo": "titulo", "imagen": "Imagen2.jpg"},
     {"titulo": "titulo", "imagen": "imagen3.jpg"},
     {"titulo": "titulo", "imagen": "imagen4.png"},
     {"titulo": "titulo", "imagen": "imagen5.jpg"},

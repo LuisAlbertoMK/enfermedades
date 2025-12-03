@@ -10,7 +10,7 @@
         {% for cartel in carteles %}
         <div class="col">
             <div class="card text-center">
-                <img src="{{ url_for('static', filename='img/carteles/' ~ cartel.imagen) }}" ...>
+                <img src="{{ url_for('static', filename='img/carteles/' ~ cartel.imagen) }}" >
                 <h5>{{ cartel.titulo }}</h5>
                 <!-- <a href="{{ url_for('static', filename='img/carteles/' ~ cartel.imagen) }}" download>Descargar</a> -->
             </div>
