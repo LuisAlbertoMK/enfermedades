@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: conecta-contigo
+    env: python
+    plan: free
+    buildCommand: ./build.sh
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    envVars:
+      PYTHON_VERSION: 3.11.8
