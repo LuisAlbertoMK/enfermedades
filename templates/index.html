@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block title %}Inicio - Conecta Contigo{% endblock %}
+
+{% block content %}
+<section class="hero text-center py-1">
+    <div class="container">
+        <h2 class="display-5 fw-bold text-dark mb-2">
+            Bienvenido a tu espacio de bienestar
+        </h2>
+        <p class="lead text-muted">
+            Aquí encontrarás recursos para mejorar tu salud mental.
+        </p>
+    </div>
+</section>
+
+<section class="illustration-section text-center py-1 bg-light">
+    <div class="container">
+        <img src="{{ url_for('static', filename='img/bienestar-emocional.webp') }}"
+             alt="Bienestar emocional"
+             class="img-fluid rounded-4 shadow-lg"
+             style="max-height: 500px;">
+    </div>
+</section>
+{% endblock %}

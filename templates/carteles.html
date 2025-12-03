@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}Carteles - Conecta Contigo{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-center display-5 fw-bold mb-5 text-primary">Carteles para descargar</h2>
+
+    <div class="row row-cols-1 row-cols-md-2 g-5">
+        {% for cartel in carteles %}
+        <div class="col">
+            <div class="card text-center">
+                <img src="{{ url_for('static', filename='img/carteles/' ~ cartel.imagen) }}" ...>
+                <h5>{{ cartel.titulo }}</h5>
+                <!-- <a href="{{ url_for('static', filename='img/carteles/' ~ cartel.imagen) }}" download>Descargar</a> -->
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

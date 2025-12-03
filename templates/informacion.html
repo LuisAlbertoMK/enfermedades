@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block title %}Información{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-center display-5 fw-bold mb-3 text-primary">
+        Información sobre salud mental
+    </h2>
+    <p class="text-center lead text-muted mb-5">
+        Conoce más sobre las principales condiciones y cómo manejarlas
+    </p>
+
+    <div class="row row-cols-1 row-cols-lg-2 g-4">
+        {% for enf in enfermedades %}
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm hover-shadow">
+                <div class="card-body p-4">
+                    <h3 class="card-title text-primary fw-bold mb-3">
+                        {{ enf.nombre }}
+                    </h3>
+                    <p class="text-muted fst-italic mb-3">
+                        {{ enf.descripcion }}
+                    </p>
+
+                    <div class="mb-3">
+                        <h6 class="fw-bold text-danger">Síntomas más comunes:</h6>
+                        <p class="small">{{ enf.sintomas }}</p>
+                    </div>
+
+                    <!-- <div class="mb-3">
+                        <h6 class="fw-bold text-success">Consejos útiles:</h6>
+                        <p class="small">{{ enf.consejos }}</p>
+                    </div> -->
+
+                    <!-- <div class="text-end mt-4">
+                        <small class="text-muted">
+                            Si te identificas con varios síntomas, busca ayuda profesional
+                        </small>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="text-center mt-5">
+        <div class="alert alert-info d-inline-block">
+            <strong>Recuerda:</strong> Esta información es educativa. Un profesional de la salud mental es quien puede diagnosticar y tratar.
+        </div>
+    </div>
+</div>
+{% endblock %}

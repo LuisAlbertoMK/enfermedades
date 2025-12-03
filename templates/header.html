@@ -1,0 +1,22 @@
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+<header class="header">
+  <div class="container d-flex header-content">
+    <div class="d-flex align-items-center gap-3">
+      <h1 class="mb-0 fw-bold" style="color: black;">Conecta Contigo</h1>
+    </div>
+    <a href="#" class="text-decoration-none" style="color: black;">Salud Mental</a>
+  </div>
+</header>   
+
+<nav class="nav-bar">
+    <div class="container">
+        <ul class="nav justify-content-center gap-4">
+            <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link {% if request.path == '/podcast' %}active{% endif %}" href="/podcast">Podcast</a></li>
+            <li class="nav-item"><a class="nav-link {% if request.path == '/carteles' %}active{% endif %}" href="/carteles">Carteles</a></li>
+            <li class="nav-item"><a class="nav-link {% if request.path == '/juego' %}active{% endif %}" href="/informacion">Información</a></li>
+        </ul>
+    </div>
+</nav>
